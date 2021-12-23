@@ -12,7 +12,7 @@ import styled from 'styled-components';
 
 const Linki = styled(Link)`
   color: ${props =>
-    props.$activeMenuOption == props.$index ?  'rgb(12, 178, 243)': 'black'};
+    props.$activeMenuOption === props.$index ?  'rgb(12, 178, 243)': 'black'};
 `;
 
 function App() {

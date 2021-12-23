@@ -134,6 +134,46 @@ button{
   border: none;
   cursor: pointer;
 }
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  color: #657786;
+}
+.profile-up{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  width: 98%;
+  background: cornflowerblue;
+}
+.profile-up .image{
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+.profile-up button{
+  width: 130px;
+  background: white;
+  border:1px solid rgb(146, 144, 144);
+  color: rgb(119, 117, 117);
+}
+.profile-down{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+  width: 98%;
+  background: #f6f7f8;
+  color: #657786;
+  border-bottom: 1px solid rgb(212, 212, 212);
+  font-size: 1.1rem;
+}
+
 
 /*right part of website*/
 .right{
