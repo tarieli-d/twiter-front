@@ -7,18 +7,61 @@ import Profile from './components/Profile';
 import Notifications from './components/Notifications';
 import Messages from './components/Messages';
 import Bookmarks from './components/Bookmarks';
+import { useState } from "react";
+import styled from 'styled-components';
+
+const Linki = styled(Link)`
+  color: ${props =>
+    props.$activeMenuOption == props.$index ?  'rgb(12, 178, 243)': 'black'};
+`;
 
 function App() {
+  const [activeMenuOption, setActiveMenuOption] = useState("6")
   return (
     <div className="Main">
       <Router>
         <div className="section left">
-          <div className="inner" id="logo"><FaTwitterSquare /></div>
-          <div className="inner"><Link to="/"><FaHome />Home</Link></div>
-          <div className="inner"><Link to="/Notifications"><FaHashtag />Notifications</Link></div>
-          <div className="inner"><Link to="/Bookmarks"><FaBookmark />Bookmarks</Link></div>
-          <div className="inner"><Link to="/Messages"><FaBell />Messages</Link></div>
-          <div className="inner"><Link to="/Profile"><FaUserAlt />Profile</Link></div>
+          <div id="logo"><FaTwitterSquare /></div>
+          <div>
+            <Linki to="/"
+              $activeMenuOption={activeMenuOption}
+              $index='0'
+              onClick={() => {
+                setActiveMenuOption('0');
+              }}><FaHome />Home</Linki>
+          </div>
+          <div>
+            <Linki to="/Notifications"
+              $activeMenuOption={activeMenuOption}
+              $index="1"
+              onClick={() => {
+                setActiveMenuOption('1');
+              }}><FaHashtag />Notifications</Linki>
+          </div>
+          <div>
+            <Linki to="/Bookmarks"
+              $activeMenuOption={activeMenuOption}
+              $index="2"
+              onClick={() => {
+                setActiveMenuOption('2');
+              }}><FaBookmark />Bookmarks</Linki>
+          </div>
+          <div>
+            <Linki to="/Messages"
+              $activeMenuOption={activeMenuOption}
+              $index="3"
+              onClick={() => {
+                setActiveMenuOption('3');
+              }}><FaBell />Messages</Linki>
+          </div>
+          <div>
+            <Linki to="/Profile"
+              $activeMenuOption={activeMenuOption}
+              $index="4"
+              onClick={() => {
+                setActiveMenuOption('4');
+              }}><FaUserAlt />Profile</Linki>
+          </div>
         </div>
         <div className="section center">
           <Routes>

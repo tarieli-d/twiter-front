@@ -8,9 +8,11 @@
 }
 .section{
   width: 33%;
-  border: 1px solid rgb(99, 97, 97);
+  border: 1px solid rgb(207, 206, 206);
   /*background: #e2e3e5;*/
 }
+
+/*left part of website*/
 .left{
   flex: 0 0 19%;
   display: flex;
@@ -19,7 +21,7 @@
   align-items: center;
   /*min-height: 100%;*/
 }
-.left .inner{
+.left >*{
   display: flex;
   align-items: center;
   height: 70px;
@@ -32,9 +34,11 @@
   display: inline-flex;
   align-items: center;
   font-size: 1.5rem;
-  color: black;
   text-decoration: none;
-} 
+}
+.left a:hover{
+  color: rgb(12, 178, 243);
+}
 #logo{
   justify-content: flex-start;
   font-size: 4rem;
@@ -64,13 +68,74 @@ input{
   height: 70%;
   color: rgb(44, 41, 41);
 }
+
+/*middle part of website*/
 .center{
   flex:0 0 49%;
 }
-.center .common-outer{
+.center .common-pages{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  width: 96%;
+  height: 50px;
+  border-bottom: 1px solid rgb(221, 220, 220);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 10px;
 }
+.center .common-subpages{
+  color: rgb(87, 182, 245);
+  font-size: 1rem;
+  justify-content:center;
+}
+.makepost{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 180px;
+  width: 100%;
+  row-gap: 1rem;
+  border-bottom: 10px solid rgb(179, 177, 177);
+}
+#textarea{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+textarea{
+  height: 100px;
+  width: 90%;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  resize: none;
+  text-indent: 1rem;
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+.image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(208, 211, 205);
+}
+.post{
+  display: flex;
+  justify-content: flex-end;
+}
+button{
+  width: 80px;
+  height: 40px;
+  border-radius: .8rem;
+  background: rgb(62, 162, 243);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/*right part of website*/
 .right{
   flex: 0 0 31%;
   display: flex;
@@ -80,9 +145,9 @@ input{
 .whoToFollow{
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 80%;
-  height: 50px;
+  height: 60px;
   color: black;
   font-size: 1.5rem;
   font-weight: bold;
